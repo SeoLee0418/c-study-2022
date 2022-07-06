@@ -13,7 +13,7 @@ int main(){
     foo(&I_E, "내가 스트레를 푸는 방법은 사람들을 만나는것이다");
     foo(&I_E, "데화를 시작하기보다 맞장구 치는걸 좋아한다");
     foo(&I_E, "술자리에서 노는것보다 집에서 게임하는게 좋다");
-
+    
     printf("S_N 검증입니다\n");
     foo(&S_N, "업무를 하거나 과제를 할때 계획을 먼저 세운다");
     foo(&S_N, "가끔 번뜩이는 아이디어가 생각나 메모를 하곤 한다");
@@ -80,7 +80,7 @@ void goo(int* a, int* b, int* c, int* d){
         mbti[0] = 'E';
     }
     else{
-        mbti[0] = 'i';
+        mbti[0] = 'I';
     }
     
     if (*b < 0) {
@@ -103,7 +103,67 @@ void goo(int* a, int* b, int* c, int* d){
     else{
         mbti[3] = 'P';
     }
-    
+
     mbti[4] = '\0';
     printf("당신의 mbti는 %s입니다\n", mbti);
+    
+    if(strcmp(mbti, "ISTJ") == 0){
+        printf("당신은 논리주의자입니다. 사실에 대하여 정확하고 체계적으로 기억하며 신중하고 책임감이 있습니다.");
+    }
+    else if (strcmp(mbti, "ISFJ") == 0){
+        printf("당신은 조용하고 차분하며 친근합니다. 가장 믿음직스러운 사람입니다.");
+    }
+    else if (strcmp(mbti, "INFJ") == 0){
+        printf("당신은 인내심이 많고 사람들을 좋아합니다. 눈치가 빠르고 영감이 있습니다.");
+    }
+    else if (strcmp(mbti, "INTJ") == 0){
+        printf("당신은 논리적이고 효율성을 중시하는 냉철한 사람입니다.");
+    }
+    else if (strcmp(mbti, "ISTP") == 0){
+        printf("조용하고 과묵하고 손재주가 있는 공학자 스타일입니다.");
+    }
+    
+    else if (strcmp(mbti, "ISFP") == 0){
+        printf("다정하고 착하고 상대방에 대한 배려심이 많습니다. 주위 사람들에게 많이 휩쓸리는 성격입니다.");
+    }
+    
+    else if (strcmp(mbti, "INFP") == 0){
+        printf("당신은 정열적이고 완벽을 추구하며 유토피아를 추구하는 성격입니다.");
+    }
+    
+    else if (strcmp(mbti, "INTP") == 0){
+        printf("당신은 조용하고 과묵하며 상상을 즐기는 사색가입니다. 사회성이 부족하다는 말을 듣습니다.");
+    }
+    
+    else if (strcmp(mbti, "ESTP") == 0){
+        printf("당신은 활동하는 것을 좋아하는 사업가형입니다.");
+    }
+    
+    else if (strcmp(mbti, "ESFP") == 0){
+        printf("당신은 자유로운 영혼을 갖고있는 연예인 스타일입니다.");
+    }
+    
+    else if (strcmp(mbti, "ENFP") == 0){
+        printf("당신은 넘치는 상상력을 바탕으로 항상 새로운 가능성을 찾아보는 탐험가입니다.");
+    }
+    
+    else if (strcmp(mbti, "ENTP") == 0){
+        printf("당신은 논쟁을 즐기며 사람을 만나는 것을 좋아합니다.");
+    }
+    
+    else if (strcmp(mbti, "ESTJ") == 0){
+        printf("현실적이고 구체적이고 사실적이며 조직을 이끌어나가는 리더형입니다.");
+    }
+    
+    else if (strcmp(mbti, "ESFJ") == 0){
+        printf("동점심이 많고 다른 사람에게 관심을 주는 것을 좋아하며 협력을 좋아하고 동료애가 끈끈합니다.");
+    }
+    
+    else if (strcmp(mbti, "ENFJ") == 0){
+        printf("당신은 따뜻하고 적극적이며 사교성이 풍부하고 이타적입니다.");
+    }
+    
+    else if (strcmp(mbti, "ENTJ") == 0){
+        printf("당신은 열정적이며 솔직하고 지도력과 통솔력이 있습니다. 활동적이고 장기적인 계획을 좋아합니다.");
+    }
 }
