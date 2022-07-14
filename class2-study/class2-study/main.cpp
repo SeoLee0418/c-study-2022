@@ -27,6 +27,7 @@ int main(){
             employee[count] = e;
             count++;
         }
+        
         else if (input == 3){
             int number = getnumber("Press the number : ");
             int deletedindex = -1;
@@ -37,8 +38,8 @@ int main(){
                     break;
                 }
             }
-            if (deletedindex <= 0) {
-                for (int i = deletedindex; i < count; i++) {
+            if (deletedindex >= 0) {
+                for (int i = deletedindex; i < count - 1; i++) {
                     employee[i] = employee[i+1];
                 }
             }

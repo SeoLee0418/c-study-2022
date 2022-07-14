@@ -11,7 +11,7 @@ class Employee {
     public :
     int em_number;
     char name[20];
-    int gender; // 0= man, girl = 1;
+    int gender; // 1 = man, girl = 2;
     char rank[20];
     
     Employee(char* name, int g, char* r){
