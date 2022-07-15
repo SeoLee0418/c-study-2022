@@ -10,16 +10,22 @@ int count_num = 1;
 class Employee {
     public :
     int em_number;
-    char name[20];
+    char* name;
     int gender; // 1 = man, girl = 2;
-    char rank[20];
+    char* rank;
     
     Employee(char* name, int g, char* r){
         this -> em_number = count_num;
         count_num++;
-        strcpy(this -> name, name);
+        this -> name = new char[strlen(name) + 1];
         gender = g;
-        strcpy(rank, r);
+        rank = new char[strlen(r) + 1];
+    }
+    
+    ~Employee(){
+        delete [] name;
+        delete [] rank;
+        
     }
     void print(){
         printf("No : %d\n", em_number);
